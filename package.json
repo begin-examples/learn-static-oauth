@@ -1,0 +1,11 @@
+{
+  "name": "begin-app",
+  "version": "0.0.0",
+  "description": "This is a static site ready to have OAuth added to it. Work along at learn.begin.com/basic/state/oauth",
+  "scripts": {
+    "start": "npx sandbox"
+  },
+  "devDependencies": {
+    "@architect/sandbox": "^1.7.0"
+  }
+}
