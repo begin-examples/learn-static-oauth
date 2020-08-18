@@ -1,4 +1,5 @@
 @app
+github-oauth
 
 @static
 
