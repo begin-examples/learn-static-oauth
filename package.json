@@ -6,6 +6,6 @@
     "start": "npx sandbox"
   },
   "devDependencies": {
-    "@architect/sandbox": "^2.0.0"
+    "@architect/sandbox": "latest"
   }
 }
