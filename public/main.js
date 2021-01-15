@@ -1,25 +1,21 @@
-(function init() {
+(async function init() {
   const authEl = document.getElementById('auth')
   const accountEl = document.getElementById('account')
   const avatarEl = document.getElementById('avatar')
-  fetch('/auth')
-    .then(response => response.json())
-    .then(result => {
-      let accountData = result.account
-      let href = result.href
-      if (accountData) {
-        authEl.innerHTML = logout()
-        accountEl.innerHTML = account(accountData)
-        avatarEl.innerHTML = avatar(accountData.avatar)
-      } else {
-        authEl.innerHTML = login(href)
-      }
-    })
-    .catch(error => {
-      console.error(error)
-    })
+  try {
+    let { account, href } = await ( await fetch('/auth') ).json()
+    if (account) {
+      authEl.innerHTML = Logout()
+      accountEl.innerHTML = UserCard(account)
+      avatarEl.innerHTML = Avatar(account.avatar)
+    } else {
+      authEl.innerHTML = Login(href)
+    }
+  } catch(err) {
+    console.error(err)
+  }
 
-  function account(data) {
+  function UserCard(data) {
     data = data || {}
     let name = data.name
     let username = data.login
@@ -69,13 +65,13 @@
     `
   }
 
-  function avatar(src) {
+  function Avatar(src) {
     return `
    <img src="${src}" alt="User's avatar">
     `
   }
 
-  function login(href) {
+  function Login(href) {
     return `
   <a
     href=${href}
@@ -98,7 +94,7 @@
     `
   }
 
-  function logout() {
+  function Logout() {
     return `
   <form
     method=POST
