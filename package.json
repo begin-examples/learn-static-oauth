@@ -1,11 +1,16 @@
 {
-  "name": "begin-app",
+  "name": "learn-static-oauth",
   "version": "0.0.0",
   "description": "This is a static site ready to have OAuth added to it. Work along at learn.begin.com/basic/state/oauth",
   "scripts": {
-    "start": "npx sandbox"
+    "start": "sandbox"
   },
   "devDependencies": {
-    "@architect/sandbox": "latest"
+    "@architect/sandbox": "^4.0.1"
+  },
+  "dependencies": {
+    "@architect/functions": "^4.0.0",
+    "@begin/data": "^3.0.0",
+    "tiny-json-http": "^7.3.0"
   }
 }
