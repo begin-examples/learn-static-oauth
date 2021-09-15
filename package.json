@@ -6,7 +6,7 @@
     "start": "sandbox"
   },
   "devDependencies": {
-    "@architect/sandbox": "^4.0.2"
+    "@architect/sandbox": "^4.0.4"
   },
   "dependencies": {
     "@architect/functions": "^4.0.0",
