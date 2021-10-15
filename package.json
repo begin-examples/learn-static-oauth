@@ -11,6 +11,6 @@
   "dependencies": {
     "@architect/functions": "^4.0.0",
     "@begin/data": "^3.0.3",
-    "tiny-json-http": "^7.3.0"
+    "tiny-json-http": "^7.3.1"
   }
 }
