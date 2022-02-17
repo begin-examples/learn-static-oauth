@@ -9,7 +9,7 @@
     "@architect/sandbox": "^5.0.0"
   },
   "dependencies": {
-    "@architect/functions": "^4.1.1",
+    "@architect/functions": "^5.0.1",
     "@begin/data": "^3.0.4",
     "tiny-json-http": "^7.3.1"
   }
